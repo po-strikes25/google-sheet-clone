@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Google Sheet Clone</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Table for the sheet -->
+    <table id="main-table">
+        <thead>
+
+            <div class="functions" id="functions">
+                <!-- attaching these functionalities in js  -->
+                <!-- bold, italic, underline -->
+                <button id="bold-button">B</button>
+                <button id="italic-button">I</button>
+                <button id="underline-button">U</button>
+
+                <!-- left, right, center -->
+                <button id="left-align">LEFT</button>
+                <button id="center-align">CENTER</button>
+                <button id="right-align">RIGHT</button>
+
+                <!-- font-size -->
+                <select name="font-size" id="font-size">
+                    <option value="14px">14</option>
+                    <option value="16px">16</option>
+                    <option value="18px">18</option>
+                    <option value="20px">20</option>
+                    <option value="24px">24</option>
+                    <option value="26px">26</option>
+                    <option value="28px">28</option>
+                    <option value="32px">32</option>
+                    <option value="36px">36</option>
+                    <option value="40px">40</option>
+                </select>
+
+                <!-- font-family -->
+                <select name="font-family" id="font-family">
+                    <option value="sans-serif">Sans Serif</option>
+                    <option value="serif">Serif</option>
+                    <option value="roboto">Roboto</option>
+                    <option value="monospace">Monospace</option>
+                    <option value="cursive">Cursive</option>
+                    <option value="emoji">Emoji</option>
+                </select>
+
+                <!-- operations -->
+                <button id="cut-button">CUT</button>
+                <button id="copy-button">COPY</button>
+                <button id="paste-button">PASTE</button>
+
+                <!-- color change -->
+                <label for="bg-color">BACKGROUND</label>
+                <input type="color" id="bg-color">
+
+                <label for="text-color">TEXT</label>
+                <input type="color" id="text-color">
+
+                <br /><br />
+
+                <!-- download function -->
+                <button id="download-button" onclick="downloadJson()">DOWNLOAD</button>
+
+                <!-- upload excel sheet -->
+                <input type="file" id="json-file" accept=".json" />
+
+                <br /><br />
+
+                <!-- simulating the sheets in js -->
+                <div id="new-sheets-container">
+                    <button class="sheet" id="add-sheet" onclick="loadTableData(this.id)">+ Sheet</button>
+                    <button class="sheet" id="add-sheet-1" onclick="loadTableData(this.id)">Sheet 1</button>
+                    <!-- <button id="sheet">Sheet 2</button>
+                    <button id="sheet">Sheet 3</button> -->
+                </div>
+
+            </div>
+
+            <br /><br />
+
+            <tr id="col-header">
+                <th id="apex-cell"></th>
+                <!-- simulating the repetition in js -->
+                <!-- <th>A</th>
+                <th>B</th>
+                <th>C</th> -->
+            </tr>
+
+        </thead>
+
+        <tbody id="table-body">
+            <!-- simulating the repetition in js -->
+        </tbody>
+
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

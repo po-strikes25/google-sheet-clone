@@ -1,0 +1,88 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  width: 100vw;
+}
+
+table {
+  /* merging the individual borders of each cell */
+  border-collapse: collapse;
+  overflow-x: auto;
+  width: auto;
+}
+
+.functions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  /* align-items: center;
+  justify-content: center; */
+
+  column-gap: 8px;
+  row-gap: 20px;
+
+  width: 100vw;
+  padding-top: 20px;
+}
+
+#bold-button,
+#italic-button,
+#underline-button {
+  width: 40px;
+  border-radius: 5px;
+}
+
+#left-align,
+#center-align,
+#right-align {
+  width: 80px;
+  border-radius: 5px;
+}
+
+#cut-button,
+#copy-button,
+#paste-button {
+  width: 80px;
+  border-radius: 5px;
+}
+
+#download-button {
+  width: 100px;
+  border-radius: 5px;
+}
+
+#font-size {
+  width: 50px;
+}
+
+#font-family {
+  width: 100px;
+}
+
+.sheet,
+#add-sheet {
+  width: 80px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  min-width: 100px;
+}
+
+tr {
+  height: 30px;
+  /* to fix the height */
+  line-height: 30px;
+}
+
+td:focus {
+  outline: none;
+}
